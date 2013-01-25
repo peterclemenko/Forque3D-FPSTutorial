@@ -1,0 +1,39 @@
+<TorsionProject>
+<Name>FPS Tutorial</Name>
+<WorkingDir/>
+<EntryScript>main.cs</EntryScript>
+<DebugHook>dbgSetParameters( #port#, "#password#", true );</DebugHook>
+<Mods>
+<Folder>core</Folder>
+<Folder>scripts</Folder>
+<Folder>art</Folder>
+<Folder>levels</Folder>
+<Folder>shaders</Folder>
+<Folder>tools</Folder>
+</Mods>
+<ScannerExts>cs; gui</ScannerExts>
+<Configs>
+<Config>
+<Name>Release</Name>
+<Executable>FPS Tutorial.exe</Executable>
+<Arguments/>
+<HasExports>true</HasExports>
+<Precompile>true</Precompile>
+<InjectDebugger>true</InjectDebugger>
+<UseSetModPaths>false</UseSetModPaths>
+</Config>
+<Config>
+<Name>Debug</Name>
+<Executable>FPS Tutorial_DEBUG.exe</Executable>
+<Arguments/>
+<HasExports>false</HasExports>
+<Precompile>false</Precompile>
+<InjectDebugger>true</InjectDebugger>
+<UseSetModPaths>false</UseSetModPaths>
+</Config>
+</Configs>
+<SearchURL/>
+<SearchProduct>Starter FPS</SearchProduct>
+<SearchVersion>HEAD</SearchVersion>
+<ExecModifiedScripts>true</ExecModifiedScripts>
+</TorsionProject>

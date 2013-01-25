@@ -1,0 +1,240 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiChunkedBitmapCtrl(MainMenuGui) {
+   bitmap = "art/gui/background";
+   useVariable = "0";
+   tile = "0";
+   position = "0 0";
+   extent = "1920 1200";
+   minExtent = "8 8";
+   horizSizing = "width";
+   vertSizing = "height";
+   profile = "GuiContentProfile";
+   visible = "1";
+   active = "1";
+   tooltipProfile = "GuiToolTipProfile";
+   hovertime = "1000";
+   isContainer = "1";
+   canSave = "1";
+   canSaveDynamicFields = "1";
+      enabled = "1";
+      guidesHorizontal = "179";
+      guidesVertical = "169";
+      isDecoy = "0";
+
+   new GuiBitmapCtrl() {
+      bitmap = "art/gui/Chinatown.png";
+      wrap = "0";
+      position = "280 26";
+      extent = "144 48";
+      minExtent = "8 2";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      profile = "GuiDefaultProfile";
+      visible = "1";
+      active = "1";
+      tooltipProfile = "GuiToolTipProfile";
+      hovertime = "1000";
+      isContainer = "0";
+      canSave = "1";
+      canSaveDynamicFields = "0";
+   };
+   new GuiBitmapCtrl() {
+      bitmap = "art/gui/Torque3D.png";
+      wrap = "0";
+      position = "30 18";
+      extent = "221 52";
+      minExtent = "8 2";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      profile = "GuiDefaultProfile";
+      visible = "1";
+      active = "1";
+      tooltipProfile = "GuiToolTipProfile";
+      hovertime = "1000";
+      isContainer = "0";
+      canSave = "1";
+      canSaveDynamicFields = "0";
+   };
+   new GuiScriptNotifyCtrl(MainMenuNotifyControl) {
+      onChildAdded = "0";
+      onChildRemoved = "0";
+      onChildResized = "0";
+      onParentResized = "1";
+      onResize = "0";
+      onLoseFirstResponder = "1";
+      onGainFirstResponder = "1";
+      position = "119 91";
+      extent = "512 444";
+      minExtent = "512 414";
+      horizSizing = "windowRelative";
+      vertSizing = "windowRelative";
+      profile = "GuiDefaultProfile";
+      visible = "1";
+      active = "1";
+      tooltipProfile = "GuiToolTipProfile";
+      hovertime = "1000";
+      isContainer = "1";
+      internalName = "mainMenuGuiContainer";
+      canSave = "1";
+      canSaveDynamicFields = "0";
+
+      new GuiBitmapButtonTextCtrl() {
+         bitmap = "art/gui/MainMenu/Multiplayer";
+         bitmapMode = "Stretched";
+         autoFitExtents = "1";
+         useModifiers = "0";
+         useStates = "1";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 3";
+         extent = "410 92";
+         minExtent = "8 2";
+         horizSizing = "windowRelative";
+         vertSizing = "windowRelative";
+         profile = "GuiDefaultProfile";
+         visible = "1";
+         active = "1";
+         command = "Canvas.setContent( HostOrJoinGui );";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiBitmapButtonTextCtrl() {
+         bitmap = "art/gui/MainMenu/OpenTutorial";
+         bitmapMode = "Stretched";
+         autoFitExtents = "1";
+         useModifiers = "0";
+         useStates = "1";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 80";
+         extent = "410 92";
+         minExtent = "8 2";
+         horizSizing = "windowRelative";
+         vertSizing = "windowRelative";
+         profile = "GuiDefaultProfile";
+         visible = "1";
+         active = "1";
+         command = "gotoWebPage(\"http://www.garagegames.com/products/torque-3d/fps\");";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiBitmapButtonTextCtrl() {
+         bitmap = "art/gui/MainMenu/Options";
+         bitmapMode = "Stretched";
+         autoFitExtents = "1";
+         useModifiers = "0";
+         useStates = "1";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 235";
+         extent = "410 92";
+         minExtent = "8 2";
+         horizSizing = "windowRelative";
+         vertSizing = "windowRelative";
+         profile = "GuiDefaultProfile";
+         visible = "1";
+         active = "1";
+         command = "Canvas.setContent( Options );";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiBitmapButtonTextCtrl() {
+         bitmap = "art/gui/MainMenu/WorldEditor";
+         bitmapMode = "Stretched";
+         autoFitExtents = "1";
+         useModifiers = "0";
+         useStates = "1";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 155";
+         extent = "410 92";
+         minExtent = "8 2";
+         horizSizing = "windowRelative";
+         vertSizing = "windowRelative";
+         profile = "GuiDefaultProfile";
+         visible = "1";
+         active = "1";
+         command = "toggleEditor(true);";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiBitmapButtonTextCtrl() {
+         bitmap = "art/gui/MainMenu/Exit";
+         bitmapMode = "Stretched";
+         autoFitExtents = "1";
+         useModifiers = "0";
+         useStates = "1";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 311";
+         extent = "314 92";
+         minExtent = "8 2";
+         horizSizing = "windowRelative";
+         vertSizing = "windowRelative";
+         profile = "GuiDefaultProfile";
+         visible = "1";
+         active = "1";
+         command = "Canvas.setContent( ConfirmExitGui );";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function MainMenuNotifyControl::onParentResized()
+{
+   repositionControl(MainMenuGui-->mainMenuGuiContainer);
+}
+
+function MainMenuGui::onWake(%this)
+{
+   if (isFunction("getWebDeployment") &&
+       getWebDeployment() &&
+       isObject(%this-->ExitButton))
+      %this-->ExitButton.setVisible(false);
+}
+
+function repositionControl ( %control )
+{
+   %ctrlExtent = %control.getExtent();
+   %ctrlExtentX = getWord(%ctrlExtent, 0);
+   %ctrlExtentY = getWord(%ctrlExtent, 1);
+   
+   %screenSize = Canvas.getExtent();
+   %screenSizeX = getWord(%screenSize, 0);
+   %screenSizeY = getWord(%screenSize, 1);
+   %newScreenPosX = getWord(%screenSize, 0);
+   %newScreenPosY = getWord(%screenSize, 1);
+   
+   %newScreenPosX *= 0.09;
+   %newScreenPosY *= 0.15;
+   %screenSize = setWord(%screenSize, 0, %screenSizeX);
+   %screenSize = setWord(%screenSize, 1, %screenSizeY);
+   
+   if ( (%newScreenPosX + %ctrlExtentX) > %screenSizeX  ||
+         (%newScreenPosY + %ctrlExtentY) > %screenSizeY )
+      %control.setPositionGlobal(0, 50);
+   else 
+      %control.setPositionGlobal(%newScreenPosX, %newScreenPosY);  
+}
