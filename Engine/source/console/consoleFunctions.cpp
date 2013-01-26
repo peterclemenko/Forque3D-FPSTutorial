@@ -30,7 +30,6 @@
 #include "core/strings/unicode.h"
 #include "core/stream/fileStream.h"
 #include "console/compiler.h"
-#include "platform/event.h"
 #include "platform/platformInput.h"
 #include "core/util/journal/journal.h"
 #include "core/util/uuid.h"
@@ -2023,8 +2022,10 @@ DefineEngineFunction( exec, bool, ( const char* fileName, bool noCalls, bool jou
    //}
 
    // If we had a DSO, let's check to see if we should be reading from it.
-   if(compiled && dsoFile != NULL && (scriptFile == NULL|| (scriptModifiedTime - dsoModifiedTime) > Torque::Time(0)))
-   {
+   //MGT: fixed bug with dsos not getting recompiled correctly
+   //Note: Using Nathan Martin's version from the forums since its easier to read and understand
+   if(compiled && dsoFile != NULL && (scriptFile == NULL|| (dsoModifiedTime >= scriptModifiedTime)))
+   { //MGT: end
       compiledStream = FileStream::createAndOpen( nameBuffer, Torque::FS::File::Read );
       if (compiledStream)
       {
